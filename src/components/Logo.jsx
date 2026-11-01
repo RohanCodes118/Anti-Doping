@@ -38,7 +38,7 @@ export default function Logo({
     if (onClick) {
       onClick(e);
     }
-    
+
     // If already on target path (or /dashboard), smooth scroll to top
     if (location.pathname === targetPath || (targetPath === '/dashboard' && location.pathname === '/dashboard')) {
       e.preventDefault();
@@ -71,8 +71,8 @@ export default function Logo({
       }}
     >
       <img
-        src="/clean-quest-logo.png"
-        alt="Clean Quest - Fair Play. Real Performance."
+        src="/main-logo.png"
+        alt="Clean Quest – Fair Play. Real Performance."
         style={{
           height: `${currentSize.height}px`,
           width: 'auto',
