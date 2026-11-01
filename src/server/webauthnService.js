@@ -44,14 +44,18 @@ function getAndConsumeChallenge(id) {
 }
 
 // Periodic cleanup of stale challenges every 2 minutes
-setInterval(() => {
+const challengeCleanupInterval = setInterval(() => {
   const now = Date.now();
+
   for (const [id, record] of challengeStore.entries()) {
     if (now > record.expiresAt) {
       challengeStore.delete(id);
     }
   }
 }, 2 * 60 * 1000);
+
+// Prevent this timer from keeping Node.js alive during production builds
+challengeCleanupInterval.unref?.();
 
 /**
  * Initialize Supabase client for server-side database operations.
