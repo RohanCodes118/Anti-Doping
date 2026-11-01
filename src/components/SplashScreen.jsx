@@ -142,7 +142,7 @@ export default function SplashScreen({ onComplete }) {
           />
 
           <img
-            src="/clean-quest-logo.png"
+            src="/main-logo.png"
             alt="Clean Quest Logo"
             style={{
               height: '140px',

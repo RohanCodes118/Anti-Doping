@@ -99,7 +99,7 @@ export default function PersistentLogoNavigation({ forceShow = false }) {
       >
         {/* Clean Quest Logo Image */}
         <img
-          src="/clean-quest-logo.png"
+          src="/main-logo.png"
           alt="Clean Quest Logo"
           style={{
             height: '28px',
