@@ -19,3 +19,4 @@ export default async function handler(req, res) {
     return res.status(400).json({ error: err.message || 'Failed to generate authentication options.' });
   }
 }
+
